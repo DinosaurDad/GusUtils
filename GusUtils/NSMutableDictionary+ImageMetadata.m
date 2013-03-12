@@ -35,6 +35,7 @@
     return dateString;
 }
 
+#ifdef GUSUTILS_ENABLE_VIDEO
 - (id)initWithImageSampleBuffer:(CMSampleBufferRef) imageDataSampleBuffer {
     
     // Dictionary of metadata is here
@@ -47,6 +48,7 @@
     CFRelease(metadataDict);
     return self;
 }
+#endif
 
 - (id)initWithInfoFromImagePicker:(NSDictionary *)info {
     

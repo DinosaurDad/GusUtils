@@ -11,7 +11,9 @@
 
 @interface NSMutableDictionary (ImageMetadataCategory) 
 
+#ifdef GUSUTILS_ENABLE_VIDEO
 - (id)initWithImageSampleBuffer:(CMSampleBufferRef) imageDataSampleBuffer;
+#endif
 
 /*
  Be careful with this method: because it uses blocks, there's no guarantee that your
